@@ -1,0 +1,320 @@
+/*=======================================================
+                    small classes
+=========================================================*/
+/*--------background colors--------*/
+.bg-black {
+    background-color: black;
+}
+.bg-white {
+    background-color: white;
+}
+/*--------font colors--------*/
+.fc-black {
+    color: black;
+}
+.fc-white {
+    color: white;
+}
+.fc-orange {
+}
+/*font markup*/
+/*--------Link colors--------*/
+.fc-black:link, fc-black:visited {
+    color: black;
+}
+a.fc-white:link, a.fc-white:visited {
+    color: white;
+}
+
+/*=======================================================
+=========================================================
+                      Specific css
+=========================================================
+=========================================================*/
+
+/*=======================================================
+                        Header
+=========================================================*/
+.navbar-default {
+    border: none;
+    box-shadow: none;
+}
+.navbar>.container-fluid>.row>.collapse>.nav {
+    background-color: #fff;
+    background-image: linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+.container-fluid .row .navbar-header .navbar-brand {
+    position: absolute;
+    z-index: 0;
+    left: 10px;
+    margin-top: 15.5px;
+    width: 500px;
+    min-height: 64px;
+    border-bottom: .1em solid #eee;
+}
+header>.navbar>.container-fluid, .navbar>.container-fluid>.row>.collapse>.nav, .navbar>.container-fluid>.row>.collapse>.nav>li {
+    min-height: 70px;
+}
+.navbar>.container-fluid>.row>.collapse>.nav>li {
+    padding-bottom: 0;
+}
+.navbar>.container-fluid>.row>.collapse>.nav>li>a {
+    font: 28px capture_itregular;
+    color: green;
+    padding: 23px 15px;
+}
+.navbar-inner {
+    position: relative;
+    padding-left: 70px;
+}
+.navbar>.container-fluid>.row>.collapse>.nav>li>a:hover, .navbar>.container-fluid>.row>.collapse>.nav>li>a:focus {
+    text-decoration: none;
+    background-color: rgba(94,173,113,1.00);
+    color: white;
+}
+.navbar>.container-fluid>.row>.collapse>.nav>li.active>a, .navbar>.container-fluid>.row>.collapse>.nav>li.active>a:hover, .navbar>.container-fluid>.row>.collapse>.nav>li.active>a:focus {
+    color: #ccc;
+    background-color: white;
+}
+.languages {
+    background-color: dimgrey;
+    color:white;
+}
+/*=======================================================
+                        content
+=========================================================*/
+.btn-bottom-push{
+    margin-bottom: 1px;
+}
+.home.content.container-fluid {
+    padding-top: 110px;
+}
+
+.content.container-fluid{
+    padding-top: 110px;
+}
+
+.push-panel{
+    margin-top: 200px;
+}
+
+.push-form {
+    margin-top: 50px;
+}
+/*---- carousel ----*/
+.carousel-indicators{
+    background-color:#ccc;
+}
+.carousel-inner {
+    height: 430px !important;
+}
+
+.item-headings> .item-title> h2,
+.item-headings> .item-cat> h2{
+    font-size: 3em;
+}
+
+.item-contents-img {
+    height: 250px;
+}
+
+.item-contents > .item-text > h3.item-text-title{
+    text-decoration: underline;
+    font-variant: small-caps;
+    font-size: 1.5em;
+}
+.item-contents > .item-text > .item-text-content-list {
+    margin-left: 20px; 
+    list-style-type:square;
+    font-size: 1.2em;
+}
+.item-contents > .item-text > .item-text-content-list > li > ul {
+    margin-left: 30px;
+}
+
+/*---- Home page panels ---- */
+.home-panel>.panel-body{
+    height:270px;
+}
+.scroll-panel{
+    overflow-y: scroll;
+}
+.panel-body>.panel-body-item>#addPollVote_id.polAns{
+    padding-bottom: 5px;
+}
+.panel-body-item{
+    padding-bottom: 3px;
+    border-bottom: black dashed thin;
+}
+
+
+/*---- General content ----*/
+
+/*----   About  ----*/
+
+/*=======================================================
+                        footer
+=========================================================*/
+html{
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin-bottom: 42px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 42px;
+}
+footer>.container-fluid>.icon-holder{
+    text-align: center;
+}
+.icon-col>.fb-icon:link, .icon-col>a.fb-icon:visited{
+    color: #47639e;
+}
+.icon-col>a:hover{
+    font-size: 0.9em;
+}
+.icon-col>.twit-icon:link, .icon-col>a.twit-icon:visited{
+    color: #55acee;
+}
+.icon-col>.lin-icon:link, .icon-col>a.lin-icon:visited{
+    color: #0077b5;
+}
+
+
+/*=======================================================
+=========================================================
+                     media querries
+=========================================================
+=========================================================*/
+
+@media all and (max-width: 1000px) and (min-width: 768px) {
+    html, body{
+        font-size: 12px;
+    }
+    .navbar>.container-fluid>.row>.collapse>.nav>li>a {
+        font-size: 1.7em;
+    }
+    .container-fluid .row .navbar-header .navbar-brand {
+        position: absolute;
+        z-index: 0;
+        left: 10px;
+        margin-top: 15.5px;
+        width: 500px;
+        min-height: 55px;
+        border-bottom: .1em solid #eee;
+    }
+    .content.container-fluid {
+        padding-top: 100px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    html,body{
+        font-size: 10px;
+    }
+    .navbar>.container-fluid>.row>.collapse>.nav>li>a {
+        font-size: 1.4em;
+    }
+    header>.navbar>.container-fluid,  .navbar>.container-fluid>.row>.collapse>.nav {
+        min-height: 50px;
+    }
+    .navbar>.container-fluid>.row>.collapse>.nav>li,  .navbar>.container-fluid>.row>.collapse>.nav>li>a {
+        padding: 2px 15px;
+        min-height: 1px;
+    }
+    .container-fluid .row .navbar-header .navbar-brand {
+        position: relative;
+        width: 60%;
+        text-align: center;
+        padding-top:0px;
+    }
+    .container-fluid .row .navbar-header .navbar-brand:after {
+        content: "	| Muscle Food Adviser";
+    }
+    .content.container-fluid {
+        padding-top: 180px;
+    }
+}
+
+/*=======================================================
+             CAROUSEL specific media queries
+=========================================================*/
+@media all and (max-width: 1500px){
+    .item-contents-img{
+        height: 200px;
+    }
+    .item-cat, .item-title {
+        font-size: 0.8em;
+    }
+
+    .carousel-inner {
+        height: 380px !important;
+    }
+
+    .item-contents > .item-text > h3.item-text-title{
+        font-size: 1.2em;
+    }
+    .item-contents > .item-text > .item-text-content-list {
+        font-size: 1em;
+    }
+
+    .home-panel>.panel-body{
+        height:300px;
+    }
+}
+@media all and (max-width: 1250px){
+    .item-contents-img{
+        height: 150px;
+    }
+    .item-cat, .item-title {
+        font-size: 0.7em;
+    }
+
+    .carousel-inner {
+        height: 330px !important;
+    }
+
+    .item-contents > .item-text > h3.item-text-title{
+        font-size: 1em;
+    }
+    .item-contents > .item-text > .item-text-content-list {
+        font-size: 0.8em;
+    }
+    
+    .home-panel>.panel-body{
+        height:400px;
+    }
+    
+    .caption {
+        font-size: 0.9em;
+    }
+}
+@media all and (max-width: 1050px){
+    .item-contents-img{
+        height: 150px;
+    }
+    .item-cat, .item-title {
+        font-size: 0.6em;
+    }
+
+    .carousel-inner {
+        height: 300px !important;
+    }
+
+    .item-contents > .item-text > h3.item-text-title{
+        font-size: 0.9em;
+    }
+    .item-contents > .item-text > .item-text-content-list {
+        font-size: 0.7em;
+    }
+    
+    .home-panel>.panel-body{
+        height:400px;
+    }
+}

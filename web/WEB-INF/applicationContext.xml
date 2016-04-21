@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!-- was: <?xml version="1.0" encoding="UTF-8"?> -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+    
+    
+ 
+    <bean id="systemAdmin" class="service.DBDrivenMFASystem" destroy-method="closeConnections">
+        <!--destroy-method to fix error's with glassfish
+            (for some reason it does not call predestroy method in reldb
+             leaving connections open)
+        -->
+        <constructor-arg>
+            <props>
+                <prop key="dbtype.poll">jpa</prop>
+                <prop key="dbtype.newsfeed">jpa</prop>
+                <prop key="dbtype.user">jpa</prop>
+                <prop key="dbname.poll">MFA_alpha_Java_modelPU</prop>
+                <prop key="dbname.newsfeed">MFA_alpha_Java_modelPU</prop>
+                <prop key="dbname.user">MFA_alpha_Java_modelPU</prop>
+            </props>
+        </constructor-arg>
+    </bean>
+</beans>
